@@ -1,10 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="400" height="280" viewBox="0 0 400 280">
   <defs>
-    <linearGradient id="grad3" x1="0" y1="0" x2="1" y2="1">
+    <linearGradient id="p3" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#b2ebf2"/>
-      <stop offset="100%" stop-color="#4dd0e1"/>
+      <stop offset="100%" stop-color="#00acc1"/>
     </linearGradient>
   </defs>
-  <rect width="400" height="280" fill="url(#grad3)"/>
-  <polygon points="0,200 200,80 400,200" fill="#006064"/>
+  <rect width="400" height="280" fill="url(#p3)"/>
+  <polygon points="40,200 200,60 360,200" fill="#004d40"/>
+  <line x1="40" y1="200" x2="200" y2="60" stroke="#00695c" stroke-width="8"/>
+  <line x1="200" y1="60" x2="360" y2="200" stroke="#00695c" stroke-width="8"/>
 </svg>
