@@ -504,15 +504,18 @@
 
         .product-image {
             height: 280px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: var(--bg-light);
             display: flex;
             align-items: center;
             justify-content: center;
-            color: white;
-            font-size: 1.3rem;
-            font-weight: 600;
             position: relative;
             overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .product-info {
@@ -552,9 +555,15 @@
             height: 350px;
             border-radius: 25px;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: var(--bg-light);
             box-shadow: var(--shadow-lg);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .portfolio-item:hover {
@@ -850,7 +859,7 @@
                     <div class="hero-shape"></div>
                     <div class="hero-shape"></div>
                     <div class="hero-main-visual">
-                        Premium Shading<br>Solutions
+                        <img src="images/hero.svg" alt="World Shading" style="width:100%;height:100%;object-fit:cover;border-radius:50px;" />
                     </div>
                 </div>
             </div>
@@ -874,7 +883,7 @@
                 <p>Located in Bahrain, we have established ourselves as the leading dealer in premium shading solutions, serving residential and commercial clients across the region with unmatched expertise and dedication to quality.</p>
             </div>
             <div class="about-visual">
-                Craftsmanship & Innovation
+                <img src="images/about.svg" alt="Craftsmanship and innovation" style="width:100%;height:100%;object-fit:cover;border-radius:30px;" />
             </div>
         </div>
 
@@ -930,28 +939,28 @@
             </div>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image">Pergolas & Gazebos</div>
+                    <div class="product-image"><img src="images/product1.svg" alt="Pergolas and Gazebos" style="width:100%;height:100%;object-fit:cover;" /></div>
                     <div class="product-info">
                         <h3>Pergolas & Gazebos</h3>
                         <p>Custom-designed pergolas and gazebos that create perfect outdoor living spaces with style, functionality, and architectural excellence.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Awnings & Canopies</div>
+                    <div class="product-image"><img src="images/product2.svg" alt="Awnings and Canopies" style="width:100%;height:100%;object-fit:cover;" /></div>
                     <div class="product-info">
                         <h3>Awnings & Canopies</h3>
                         <p>Retractable and fixed awnings providing flexible shade solutions for patios, decks, and commercial spaces with premium materials.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Shade Sails</div>
+                    <div class="product-image"><img src="images/product3.svg" alt="Shade Sails" style="width:100%;height:100%;object-fit:cover;" /></div>
                     <div class="product-info">
                         <h3>Shade Sails</h3>
                         <p>Modern architectural shade sails offering contemporary design with maximum UV protection and weather resistance.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Commercial Structures</div>
+                    <div class="product-image"><img src="images/product4.svg" alt="Commercial Structures" style="width:100%;height:100%;object-fit:cover;" /></div>
                     <div class="product-info">
                         <h3>Commercial Structures</h3>
                         <p>Large-scale shading solutions for businesses, schools, and public spaces designed for durability and professional aesthetics.</p>
@@ -973,6 +982,7 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
+                    <img src="images/portfolio1.svg" alt="Luxury Residential Villa" />
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Luxury Residential Villa</h3>
@@ -981,6 +991,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
+                    <img src="images/portfolio2.svg" alt="Commercial Restaurant Terrace" />
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Commercial Restaurant Terrace</h3>
@@ -989,6 +1000,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
+                    <img src="images/portfolio3.svg" alt="International School Campus" />
                     <div class="portfolio-overlay">
                         <div>
                             <h3>International School Campus</h3>
@@ -997,6 +1009,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
+                    <img src="images/portfolio4.svg" alt="Five-Star Hotel Pool Area" />
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Five-Star Hotel Pool Area</h3>
@@ -1005,6 +1018,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
+                    <img src="images/portfolio5.svg" alt="Corporate Office Complex" />
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Corporate Office Complex</h3>
@@ -1013,6 +1027,7 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
+                    <img src="images/portfolio6.svg" alt="Premium Shopping Center" />
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Premium Shopping Center</h3>
