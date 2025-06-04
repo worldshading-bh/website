@@ -859,7 +859,23 @@
                     <div class="hero-shape"></div>
                     <div class="hero-shape"></div>
                     <div class="hero-main-visual">
-                        <img src="images/hero.svg" alt="Illustration of a modern pergola" style="width:100%;height:100%;object-fit:cover;border-radius:50px;" />
+                        <svg aria-label="Illustration of a modern pergola" viewBox="0 0 400 400" style="width:100%;height:100%;border-radius:50px;">
+                            <defs>
+                                <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#b2dfdb" />
+                                    <stop offset="100%" stop-color="#00796b" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="400" fill="url(#grad)" />
+                            <g fill="#fff">
+                                <rect x="60" y="200" width="20" height="120" />
+                                <rect x="320" y="200" width="20" height="120" />
+                                <rect x="60" y="200" width="280" height="20" />
+                                <rect x="60" y="230" width="280" height="10" />
+                                <rect x="60" y="260" width="280" height="10" />
+                                <rect x="60" y="290" width="280" height="10" />
+                            </g>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -883,7 +899,18 @@
                 <p>Located in Bahrain, we have established ourselves as the leading dealer in premium shading solutions, serving residential and commercial clients across the region with unmatched expertise and dedication to quality.</p>
             </div>
             <div class="about-visual">
-                <img src="images/about.svg" alt="Blueprint illustration for custom shading" style="width:100%;height:100%;object-fit:cover;border-radius:30px;" />
+                <svg aria-label="Blueprint illustration for custom shading" viewBox="0 0 600 400" style="width:100%;height:100%;border-radius:30px;">
+                    <defs>
+                        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#bbdefb" />
+                            <stop offset="100%" stop-color="#1976d2" />
+                        </linearGradient>
+                    </defs>
+                    <rect width="600" height="400" fill="url(#grad)" />
+                    <rect x="120" y="120" width="360" height="200" fill="#fff" stroke="#0d47a1" stroke-width="8" />
+                    <path d="M160 160 h280 M160 200 h280 M160 240 h280" stroke="#0d47a1" stroke-width="6" />
+                    <path d="M220 120 v200 M380 120 v200" stroke="#0d47a1" stroke-width="6" />
+                </svg>
             </div>
         </div>
 
@@ -939,28 +966,92 @@
             </div>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-image"><img src="images/product1.svg" alt="Pergola illustration" style="width:100%;height:100%;object-fit:cover;" /></div>
+                    <div class="product-image">
+                        <svg aria-label="Pergola illustration" viewBox="0 0 400 280" style="width:100%;height:100%;object-fit:cover;">
+                            <defs>
+                                <linearGradient id="p1" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#d7ccc8" />
+                                    <stop offset="100%" stop-color="#5d4037" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="280" fill="url(#p1)" />
+                            <g stroke="#3e2723" stroke-width="10" fill="none">
+                                <rect x="60" y="120" width="280" height="100" />
+                                <line x1="60" y1="120" x2="60" y2="80" />
+                                <line x1="340" y1="120" x2="340" y2="80" />
+                                <line x1="60" y1="80" x2="340" y2="80" />
+                                <line x1="100" y1="80" x2="100" y2="60" />
+                                <line x1="300" y1="80" x2="300" y2="60" />
+                                <line x1="100" y1="60" x2="300" y2="60" />
+                            </g>
+                        </svg>
+                    </div>
                     <div class="product-info">
                         <h3>Pergolas & Gazebos</h3>
                         <p>Custom-designed pergolas and gazebos that create perfect outdoor living spaces with style, functionality, and architectural excellence.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image"><img src="images/product2.svg" alt="Awning over window" style="width:100%;height:100%;object-fit:cover;" /></div>
+                    <div class="product-image">
+                        <svg aria-label="Awning over window" viewBox="0 0 400 280" style="width:100%;height:100%;object-fit:cover;">
+                            <defs>
+                                <linearGradient id="p2" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#ffe082" />
+                                    <stop offset="100%" stop-color="#ffb300" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="280" fill="url(#p2)" />
+                            <rect x="120" y="140" width="160" height="100" fill="#fff" stroke="#bf360c" stroke-width="8" />
+                            <path d="M100 140 l200 0 l-20 -40 l-160 0 z" fill="#bf360c" />
+                            <path d="M120 100 l160 0" stroke="#ffe0b2" stroke-width="8" />
+                        </svg>
+                    </div>
                     <div class="product-info">
                         <h3>Awnings & Canopies</h3>
                         <p>Retractable and fixed awnings providing flexible shade solutions for patios, decks, and commercial spaces with premium materials.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image"><img src="images/product3.svg" alt="Shade sail" style="width:100%;height:100%;object-fit:cover;" /></div>
+                    <div class="product-image">
+                        <svg aria-label="Shade sail" viewBox="0 0 400 280" style="width:100%;height:100%;object-fit:cover;">
+                            <defs>
+                                <linearGradient id="p3" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#b2ebf2" />
+                                    <stop offset="100%" stop-color="#00acc1" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="280" fill="url(#p3)" />
+                            <polygon points="40,200 200,60 360,200" fill="#004d40" />
+                            <line x1="40" y1="200" x2="200" y2="60" stroke="#00695c" stroke-width="8" />
+                            <line x1="200" y1="60" x2="360" y2="200" stroke="#00695c" stroke-width="8" />
+                        </svg>
+                    </div>
                     <div class="product-info">
                         <h3>Shade Sails</h3>
                         <p>Modern architectural shade sails offering contemporary design with maximum UV protection and weather resistance.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image"><img src="images/product4.svg" alt="Large commercial canopy" style="width:100%;height:100%;object-fit:cover;" /></div>
+                    <div class="product-image">
+                        <svg aria-label="Large commercial canopy" viewBox="0 0 400 280" style="width:100%;height:100%;object-fit:cover;">
+                            <defs>
+                                <linearGradient id="p4" x1="0" y1="0" x2="1" y2="1">
+                                    <stop offset="0%" stop-color="#d1c4e9" />
+                                    <stop offset="100%" stop-color="#673ab7" />
+                                </linearGradient>
+                            </defs>
+                            <rect width="400" height="280" fill="url(#p4)" />
+                            <g stroke="#4527a0" stroke-width="8" fill="#b39ddb">
+                                <rect x="40" y="140" width="320" height="80" />
+                                <line x1="40" y1="140" x2="40" y2="100" />
+                                <line x1="360" y1="140" x2="360" y2="100" />
+                                <line x1="40" y1="100" x2="360" y2="100" />
+                                <line x1="120" y1="100" x2="120" y2="70" />
+                                <line x1="280" y1="100" x2="280" y2="70" />
+                                <line x1="120" y1="70" x2="280" y2="70" />
+                            </g>
+                        </svg>
+                    </div>
                     <div class="product-info">
                         <h3>Commercial Structures</h3>
                         <p>Large-scale shading solutions for businesses, schools, and public spaces designed for durability and professional aesthetics.</p>
@@ -982,7 +1073,18 @@
             </div>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="images/portfolio1.svg" alt="Villa with pergola" />
+                    <svg aria-label="Villa with pergola" viewBox="0 0 600 350" style="width:100%;height:100%;object-fit:cover;">
+                        <defs>
+                            <linearGradient id="r1" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#ffe0b2" />
+                                <stop offset="100%" stop-color="#fb8c00" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="600" height="350" fill="url(#r1)" />
+                        <rect x="150" y="180" width="300" height="120" fill="#fff" stroke="#e65100" stroke-width="10" />
+                        <polygon points="150,180 300,110 450,180" fill="#ff9800" />
+                        <rect x="200" y="150" width="200" height="30" fill="#ffb74d" />
+                    </svg>
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Luxury Residential Villa</h3>
@@ -991,7 +1093,18 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="images/portfolio2.svg" alt="Restaurant terrace with awning" />
+                    <svg aria-label="Restaurant terrace with awning" viewBox="0 0 600 350" style="width:100%;height:100%;object-fit:cover;">
+                        <defs>
+                            <linearGradient id="r2" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#ffcdd2" />
+                                <stop offset="100%" stop-color="#e57373" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="600" height="350" fill="url(#r2)" />
+                        <rect x="180" y="190" width="240" height="100" fill="#fff" stroke="#b71c1c" stroke-width="10" />
+                        <polygon points="160,190 440,190 420,150 180,150" fill="#d32f2f" />
+                        <line x1="200" y1="150" x2="400" y2="150" stroke="#ffcdd2" stroke-width="8" />
+                    </svg>
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Commercial Restaurant Terrace</h3>
@@ -1000,7 +1113,18 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="images/portfolio3.svg" alt="School campus shade sail" />
+                    <svg aria-label="School campus shade sail" viewBox="0 0 600 350" style="width:100%;height:100%;object-fit:cover;">
+                        <defs>
+                            <linearGradient id="r3" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#b3e5fc" />
+                                <stop offset="100%" stop-color="#0288d1" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="600" height="350" fill="url(#r3)" />
+                        <polygon points="100,250 300,120 500,250" fill="#01579b" />
+                        <line x1="100" y1="250" x2="300" y2="120" stroke="#0288d1" stroke-width="10" />
+                        <line x1="300" y1="120" x2="500" y2="250" stroke="#0288d1" stroke-width="10" />
+                    </svg>
                     <div class="portfolio-overlay">
                         <div>
                             <h3>International School Campus</h3>
@@ -1009,7 +1133,20 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="images/portfolio4.svg" alt="Hotel cabana" />
+                    <svg aria-label="Hotel cabana" viewBox="0 0 600 350" style="width:100%;height:100%;object-fit:cover;">
+                        <defs>
+                            <linearGradient id="r4" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#d1c4e9" />
+                                <stop offset="100%" stop-color="#512da8" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="600" height="350" fill="url(#r4)" />
+                        <rect x="200" y="160" width="200" height="120" fill="#fff" stroke="#311b92" stroke-width="10" />
+                        <rect x="180" y="160" width="240" height="20" fill="#673ab7" />
+                        <line x1="200" y1="160" x2="200" y2="130" stroke="#311b92" stroke-width="10" />
+                        <line x1="400" y1="160" x2="400" y2="130" stroke="#311b92" stroke-width="10" />
+                        <line x1="200" y1="130" x2="400" y2="130" stroke="#311b92" stroke-width="10" />
+                    </svg>
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Five-Star Hotel Pool Area</h3>
@@ -1018,7 +1155,18 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="images/portfolio5.svg" alt="Office walkway cover" />
+                    <svg aria-label="Office walkway cover" viewBox="0 0 600 350" style="width:100%;height:100%;object-fit:cover;">
+                        <defs>
+                            <linearGradient id="r5" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#c8e6c9" />
+                                <stop offset="100%" stop-color="#388e3c" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="600" height="350" fill="url(#r5)" />
+                        <rect x="170" y="170" width="260" height="110" fill="#fff" stroke="#1b5e20" stroke-width="10" />
+                        <line x1="170" y1="170" x2="430" y2="170" stroke="#2e7d32" stroke-width="20" />
+                        <line x1="170" y1="140" x2="430" y2="140" stroke="#2e7d32" stroke-width="20" />
+                    </svg>
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Corporate Office Complex</h3>
@@ -1027,7 +1175,19 @@
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="images/portfolio6.svg" alt="Shopping center canopy" />
+                    <svg aria-label="Shopping center canopy" viewBox="0 0 600 350" style="width:100%;height:100%;object-fit:cover;">
+                        <defs>
+                            <linearGradient id="r6" x1="0" y1="0" x2="1" y2="1">
+                                <stop offset="0%" stop-color="#d7ccc8" />
+                                <stop offset="100%" stop-color="#6d4c41" />
+                            </linearGradient>
+                        </defs>
+                        <rect width="600" height="350" fill="url(#r6)" />
+                        <rect x="160" y="160" width="280" height="120" fill="#fff" stroke="#3e2723" stroke-width="10" />
+                        <line x1="160" y1="160" x2="160" y2="120" stroke="#5d4037" stroke-width="10" />
+                        <line x1="440" y1="160" x2="440" y2="120" stroke="#5d4037" stroke-width="10" />
+                        <line x1="160" y1="120" x2="440" y2="120" stroke="#5d4037" stroke-width="10" />
+                    </svg>
                     <div class="portfolio-overlay">
                         <div>
                             <h3>Premium Shopping Center</h3>
