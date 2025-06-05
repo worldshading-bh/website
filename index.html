@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Shading - Premium Shading Solutions in Bahrain</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,6 +15,9 @@
         :root {
             --primary-color: #E54B2C;
             --secondary-color: #131667;
+            --accent-color: #F59E0B;
+            --font-heading: 'Poppins', 'Inter', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             --text-dark: #1a1a1a;
             --text-gray: #6b7280;
             --text-light: #9ca3af;
@@ -28,7 +31,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
             color: var(--text-dark);
             overflow-x: hidden;
@@ -38,6 +41,7 @@
 
         /* Modern Typography */
         .heading-xl {
+            font-family: var(--font-heading);
             font-size: clamp(3.5rem, 8vw, 7rem);
             font-weight: 800;
             line-height: 0.9;
@@ -45,6 +49,7 @@
         }
 
         .heading-lg {
+            font-family: var(--font-heading);
             font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 700;
             line-height: 1.1;
@@ -52,6 +57,7 @@
         }
 
         .heading-md {
+            font-family: var(--font-heading);
             font-size: clamp(1.8rem, 3vw, 2.5rem);
             font-weight: 600;
             line-height: 1.2;
@@ -89,7 +95,7 @@
         .logo {
             font-size: 1.75rem;
             font-weight: 800;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -118,7 +124,7 @@
             left: 0;
             width: 0;
             height: 2px;
-            background: var(--primary-color);
+            background: var(--accent-color);
             transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -127,7 +133,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary-color);
+            color: var(--accent-color);
         }
 
         .cta-btn {
@@ -146,6 +152,7 @@
         .cta-btn:hover {
             transform: translateY(-2px);
             box-shadow: var(--shadow-lg);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
         }
 
         .mobile-menu {
@@ -170,8 +177,8 @@
             align-items: center;
             overflow: hidden;
             background: radial-gradient(ellipse at top, rgba(19, 22, 103, 0.1) 0%, transparent 70%),
-                        radial-gradient(ellipse at bottom right, rgba(229, 75, 44, 0.1) 0%, transparent 70%),
-                        linear-gradient(135deg, #fafafa 0%, #f0f0f0 100%);
+                        radial-gradient(ellipse at bottom right, rgba(245, 158, 11, 0.1) 0%, transparent 70%),
+                        linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
         }
 
         .hero-container {
@@ -200,14 +207,14 @@
             display: inline-flex;
             align-items: center;
             gap: 0.5rem;
-            background: rgba(229, 75, 44, 0.1);
-            color: var(--primary-color);
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--accent-color);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.875rem;
             font-weight: 600;
             margin-bottom: 2rem;
-            border: 1px solid rgba(229, 75, 44, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.2);
         }
 
         .hero-title {
@@ -247,6 +254,7 @@
         .btn-primary:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-xl);
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
         }
 
         .btn-secondary {
@@ -262,7 +270,7 @@
         }
 
         .btn-secondary:hover {
-            background: var(--text-dark);
+            background: linear-gradient(135deg, var(--text-dark), var(--accent-color));
             color: white;
             transform: translateY(-2px);
         }
@@ -310,7 +318,7 @@
         .hero-shape {
             position: absolute;
             border-radius: 30px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             opacity: 0.1;
             animation: float 6s ease-in-out infinite;
         }
@@ -342,7 +350,7 @@
         .hero-main-visual {
             width: 400px;
             height: 400px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             border-radius: 50px;
             display: flex;
             align-items: center;
@@ -369,14 +377,14 @@
 
         .section-badge {
             display: inline-block;
-            background: rgba(229, 75, 44, 0.1);
-            color: var(--primary-color);
+            background: rgba(245, 158, 11, 0.1);
+            color: var(--accent-color);
             padding: 0.5rem 1rem;
             border-radius: 50px;
             font-size: 0.875rem;
             font-weight: 600;
             margin-bottom: 1rem;
-            border: 1px solid rgba(229, 75, 44, 0.2);
+            border: 1px solid rgba(245, 158, 11, 0.2);
         }
 
         .section-title {
@@ -451,7 +459,7 @@
             left: 0;
             width: 100%;
             height: 4px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
         }
 
         .excellence-card:hover {
@@ -504,7 +512,7 @@
 
         .product-image {
             height: 280px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             display: flex;
             align-items: center;
             justify-content: center;
@@ -552,7 +560,7 @@
             height: 350px;
             border-radius: 25px;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
             box-shadow: var(--shadow-lg);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -615,7 +623,7 @@
         }
 
         .contact-info h3 {
-            color: var(--primary-color);
+            color: var(--accent-color);
             font-size: 1.5rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
@@ -661,7 +669,7 @@
         .form-group input:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: var(--primary-color);
+            border-color: var(--accent-color);
             background: rgba(255, 255, 255, 0.15);
         }
 
@@ -1028,7 +1036,7 @@
     <section id="contact" class="contact">
         <div class="contact-container">
             <div class="section-header">
-                <div class="section-badge" style="background: rgba(229, 75, 44, 0.2); border-color: var(--primary-color);">Contact Us</div>
+                <div class="section-badge" style="background: rgba(245, 158, 11, 0.2); border-color: var(--accent-color);">Contact Us</div>
                 <h2 class="section-title heading-lg" style="color: white;">Ready to Transform Your Space?</h2>
                 <p class="section-subtitle text-xl" style="color: rgba(255, 255, 255, 0.9);">
                     Get in touch for a free consultation and discover how we can enhance your outdoor environment
@@ -1172,7 +1180,7 @@
                 setTimeout(() => {
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
-                    submitBtn.style.background = 'linear-gradient(135deg, var(--primary-color), var(--secondary-color))';
+                    submitBtn.style.background = 'linear-gradient(135deg, var(--primary-color), var(--accent-color))';
                     this.reset();
                 }, 2000);
             }, 1500);
