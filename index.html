@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>World Shading - Premium Shading Solutions in Bahrain</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -15,58 +14,17 @@
         :root {
             --primary-color: #E54B2C;
             --secondary-color: #131667;
-            --accent-color: #F59E0B;
-            --font-heading: 'Poppins', 'Inter', sans-serif;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            --text-dark: #1a1a1a;
-            --text-gray: #6b7280;
-            --text-light: #9ca3af;
-            --bg-light: #f9fafb;
+            --text-dark: #2c3e50;
+            --text-light: #7f8c8d;
+            --bg-light: #f8f9fa;
             --white: #ffffff;
-            --glass-bg: rgba(255, 255, 255, 0.1);
-            --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
-            --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
-            --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
-            --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1);
         }
 
         body {
-            font-family: var(--font-body);
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
             color: var(--text-dark);
             overflow-x: hidden;
-            scroll-behavior: smooth;
-            background: var(--white);
-        }
-
-        /* Modern Typography */
-        .heading-xl {
-            font-family: var(--font-heading);
-            font-size: clamp(3.5rem, 8vw, 7rem);
-            font-weight: 800;
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-        }
-
-        .heading-lg {
-            font-family: var(--font-heading);
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-        }
-
-        .heading-md {
-            font-family: var(--font-heading);
-            font-size: clamp(1.8rem, 3vw, 2.5rem);
-            font-weight: 600;
-            line-height: 1.2;
-        }
-
-        .text-xl {
-            font-size: clamp(1.2rem, 2vw, 1.4rem);
-            font-weight: 400;
-            line-height: 1.6;
         }
 
         /* Header */
@@ -74,415 +32,184 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
             z-index: 1000;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.3s ease;
         }
 
         .nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1.5rem 0;
+            padding: 1rem 5%;
             max-width: 1400px;
             margin: 0 auto;
-            padding-left: 2rem;
-            padding-right: 2rem;
         }
 
         .logo {
-            font-size: 1.75rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            letter-spacing: -0.02em;
         }
 
         .nav-links {
             display: flex;
             list-style: none;
-            gap: 2.5rem;
+            gap: 2rem;
         }
 
         .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 500;
-            font-size: 0.95rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--accent-color);
-            transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
+            transition: color 0.3s ease;
         }
 
         .nav-links a:hover {
-            color: var(--accent-color);
+            color: var(--primary-color);
         }
 
         .cta-btn {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             color: white;
-            padding: 0.75rem 2rem;
+            padding: 0.8rem 1.5rem;
             border: none;
             border-radius: 50px;
             cursor: pointer;
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-md);
+            transition: transform 0.3s ease;
         }
 
         .cta-btn:hover {
             transform: translateY(-2px);
-            box-shadow: var(--shadow-lg);
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
         }
 
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .mobile-menu span {
-            width: 25px;
-            height: 3px;
-            background: var(--text-dark);
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
-        /* Hero Section - Ultra Modern */
+        /* Hero Section */
         .hero {
-            min-height: 100vh;
-            position: relative;
+            height: 100vh;
+            background: linear-gradient(135deg, rgba(19, 22, 103, 0.9), rgba(229, 75, 44, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23f0f0f0" points="0,1000 1000,0 1000,1000"/></svg>');
             display: flex;
             align-items: center;
+            position: relative;
             overflow: hidden;
-            background: radial-gradient(ellipse at top, rgba(19, 22, 103, 0.1) 0%, transparent 70%),
-                        radial-gradient(ellipse at bottom right, rgba(245, 158, 11, 0.1) 0%, transparent 70%),
-                        linear-gradient(135deg, var(--white) 0%, var(--bg-light) 100%);
         }
 
-        .hero-container {
+        .hero-content {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
+            padding: 0 5%;
+            color: white;
             z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: slideInUp 1s ease;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease 0.2s both;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 3rem;
+            margin-top: 3rem;
+            animation: slideInUp 1s ease 0.4s both;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            display: block;
+        }
+
+        .floating-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-element {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
         }
 
-        .hero-content {
-            animation: slideInLeft 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hero-visual {
-            position: relative;
-            height: 600px;
-            animation: slideInRight 1s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent-color);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 2rem;
-            border: 1px solid rgba(245, 158, 11, 0.2);
-        }
-
-        .hero-title {
-            margin-bottom: 1.5rem;
-            background: linear-gradient(135deg, var(--text-dark) 0%, var(--text-gray) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            color: var(--text-gray);
-            margin-bottom: 3rem;
-            max-width: 500px;
-            font-weight: 400;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 4rem;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            color: white;
-            padding: 1rem 2.5rem;
-            border: none;
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-xl);
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-dark);
-            padding: 1rem 2.5rem;
-            border: 2px solid var(--text-dark);
-            border-radius: 50px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .btn-secondary:hover {
-            background: linear-gradient(135deg, var(--text-dark), var(--accent-color));
-            color: white;
-            transform: translateY(-2px);
-        }
-
-        .hero-stats {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-        }
-
-        .stat {
-            text-align: left;
-            padding: 1.5rem 0;
-            border-top: 2px solid var(--bg-light);
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            display: block;
-            line-height: 1;
-        }
-
-        .stat-label {
-            color: var(--text-gray);
-            font-size: 0.9rem;
-            font-weight: 500;
-            margin-top: 0.5rem;
-        }
-
-        /* Hero Visual Elements */
-        .hero-visual-container {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-shape {
-            position: absolute;
-            border-radius: 30px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            opacity: 0.1;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .hero-shape:nth-child(1) {
-            width: 300px;
-            height: 300px;
-            top: 10%;
-            right: 10%;
-            animation-delay: 0s;
-        }
-
-        .hero-shape:nth-child(2) {
-            width: 200px;
-            height: 200px;
-            bottom: 20%;
-            left: 20%;
-            animation-delay: 2s;
-        }
-
-        .hero-shape:nth-child(3) {
-            width: 150px;
-            height: 150px;
-            top: 50%;
-            left: 50%;
-            animation-delay: 4s;
-        }
-
-        .hero-main-visual {
-            width: 400px;
-            height: 400px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            border-radius: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.5rem;
-            font-weight: 600;
-            box-shadow: var(--shadow-xl);
-            position: relative;
-            z-index: 2;
-        }
-
-        /* About Section - Redesigned */
-        .about {
-            padding: 8rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 5rem;
-        }
-
-        .section-badge {
-            display: inline-block;
-            background: rgba(245, 158, 11, 0.1);
-            color: var(--accent-color);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            border: 1px solid rgba(245, 158, 11, 0.2);
-        }
-
-        .section-title {
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--text-dark), var(--text-gray));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .section-subtitle {
-            color: var(--text-gray);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: center;
-            margin-bottom: 6rem;
-        }
-
-        .about-content h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-            color: var(--text-dark);
-        }
-
-        .about-content p {
-            color: var(--text-gray);
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-        }
-
-        .about-visual {
-            height: 400px;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            border-radius: 30px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.2rem;
-            font-weight: 600;
-            box-shadow: var(--shadow-xl);
+        .about-text {
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .excellence-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
+            margin-top: 3rem;
         }
 
         .excellence-card {
             background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .excellence-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            border-left: 4px solid var(--primary-color);
         }
 
         .excellence-card:hover {
             transform: translateY(-5px);
-            box-shadow: var(--shadow-lg);
         }
 
         .excellence-card h3 {
-            color: var(--text-dark);
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            font-weight: 600;
-        }
-
-        .excellence-card p {
-            color: var(--text-gray);
-            line-height: 1.6;
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
         }
 
         /* Products Section */
         .products {
             background: var(--bg-light);
-            padding: 8rem 2rem;
+            padding: 5rem 5%;
         }
 
         .products-container {
@@ -492,56 +219,45 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .product-card {
             background: white;
-            border-radius: 25px;
+            border-radius: 20px;
             overflow: hidden;
-            box-shadow: var(--shadow-sm);
-            border: 1px solid rgba(0, 0, 0, 0.05);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
+            transform: translateY(-10px);
         }
 
         .product-image {
-            height: 280px;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            height: 250px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
-            font-size: 1.3rem;
-            font-weight: 600;
-            position: relative;
-            overflow: hidden;
+            font-size: 1.2rem;
         }
 
         .product-info {
-            padding: 2.5rem;
+            padding: 2rem;
         }
 
         .product-info h3 {
-            color: var(--text-dark);
-            font-size: 1.3rem;
-            font-weight: 600;
+            color: var(--secondary-color);
             margin-bottom: 1rem;
-        }
-
-        .product-info p {
-            color: var(--text-gray);
-            line-height: 1.6;
         }
 
         /* Portfolio Section */
         .portfolio {
-            padding: 8rem 2rem;
+            padding: 5rem 5%;
         }
 
         .portfolio-container {
@@ -551,23 +267,17 @@
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
         }
 
         .portfolio-item {
             position: relative;
-            height: 350px;
-            border-radius: 25px;
+            height: 300px;
+            border-radius: 20px;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
-            box-shadow: var(--shadow-lg);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .portfolio-item:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-xl);
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
         }
 
         .portfolio-overlay {
@@ -576,38 +286,25 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(19, 22, 103, 0.85);
-            backdrop-filter: blur(10px);
+            background: rgba(19, 22, 103, 0.8);
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             text-align: center;
             opacity: 0;
-            transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            padding: 2rem;
+            transition: opacity 0.3s ease;
         }
 
         .portfolio-item:hover .portfolio-overlay {
             opacity: 1;
         }
 
-        .portfolio-overlay h3 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .portfolio-overlay p {
-            font-size: 1rem;
-            opacity: 0.9;
-        }
-
         /* Contact Section */
         .contact {
             background: var(--secondary-color);
             color: white;
-            padding: 8rem 2rem;
+            padding: 5rem 5%;
         }
 
         .contact-container {
@@ -618,59 +315,34 @@
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 6rem;
-            align-items: start;
+            gap: 4rem;
+            margin-top: 3rem;
         }
 
         .contact-info h3 {
-            color: var(--accent-color);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info p {
-            margin-bottom: 1.5rem;
-            line-height: 1.7;
-            opacity: 0.9;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
         }
 
         .contact-form {
             background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(20px);
-            padding: 3rem;
-            border-radius: 25px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .contact-form h3 {
-            margin-bottom: 2rem;
-            font-size: 1.5rem;
-            font-weight: 600;
+            padding: 2rem;
+            border-radius: 15px;
         }
 
         .form-group {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         .form-group input,
         .form-group textarea {
             width: 100%;
-            padding: 1.2rem;
+            padding: 1rem;
             border: none;
-            border-radius: 15px;
+            border-radius: 10px;
             background: rgba(255, 255, 255, 0.1);
             color: white;
             border: 1px solid rgba(255, 255, 255, 0.2);
-            font-size: 1rem;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--accent-color);
-            background: rgba(255, 255, 255, 0.15);
         }
 
         .form-group input::placeholder,
@@ -680,123 +352,52 @@
 
         /* Footer */
         .footer {
-            background: #0a0a0a;
+            background: #1a1a1a;
             color: white;
             text-align: center;
-            padding: 3rem 2rem;
-        }
-
-        .footer p {
-            opacity: 0.8;
+            padding: 2rem 5%;
         }
 
         /* Animations */
-        @keyframes slideInLeft {
+        @keyframes slideInUp {
             from {
                 opacity: 0;
-                transform: translateX(-50px);
+                transform: translateY(50px);
             }
             to {
                 opacity: 1;
-                transform: translateX(0);
-            }
-        }
-
-        @keyframes slideInRight {
-            from {
-                opacity: 0;
-                transform: translateX(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateX(0);
+                transform: translateY(0);
             }
         }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(5deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
         }
 
         /* Mobile Responsive */
-        @media (max-width: 1024px) {
-            .hero-container {
-                grid-template-columns: 1fr;
-                gap: 3rem;
-                text-align: center;
-            }
-
-            .hero-visual {
-                height: 400px;
-            }
-
-            .hero-main-visual {
-                width: 300px;
-                height: 300px;
-            }
-        }
-
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
 
-            .mobile-menu {
-                display: flex;
-            }
-
-            .hero-container {
-                padding: 2rem 1rem;
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
             .hero-stats {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-
-            .hero-cta {
                 flex-direction: column;
-                align-items: center;
+                gap: 1rem;
             }
 
             .about-grid,
             .contact-grid {
                 grid-template-columns: 1fr;
-                gap: 3rem;
+                gap: 2rem;
             }
 
             .excellence-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .products-grid,
-            .portfolio-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section-header {
-                margin-bottom: 3rem;
-            }
-
-            .about,
-            .products,
-            .portfolio,
-            .contact {
-                padding: 5rem 1rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .nav {
-                padding: 1rem;
-            }
-
-            .hero-container {
-                padding: 1rem;
-            }
-
-            .contact-form {
-                padding: 2rem;
             }
         }
     </style>
@@ -814,52 +415,31 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
             <button class="cta-btn">Get Quote</button>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    🏆 Leading Dealer in Bahrain
+        <div class="floating-elements">
+            <div class="floating-element" style="width: 100px; height: 100px; top: 20%; left: 10%; animation-delay: 0s;"></div>
+            <div class="floating-element" style="width: 150px; height: 150px; top: 60%; right: 15%; animation-delay: 2s;"></div>
+            <div class="floating-element" style="width: 80px; height: 80px; top: 40%; left: 70%; animation-delay: 4s;"></div>
+        </div>
+        <div class="hero-content">
+            <h1>Premium Shading Solutions</h1>
+            <p>Transforming outdoor spaces with innovative, custom-made shade structures that combine style, durability, and superior UV protection.</p>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">10+</span>
+                    <span>Years Experience</span>
                 </div>
-                <h1 class="hero-title heading-xl">Premium Shading Solutions</h1>
-                <p class="hero-subtitle text-xl">
-                    Transforming outdoor spaces with innovative, custom-made shade structures that combine exceptional craftsmanship, cutting-edge design, and superior UV protection.
-                </p>
-                <div class="hero-cta">
-                    <button class="btn-primary">Explore Our Work</button>
-                    <button class="btn-secondary">Get Free Quote</button>
+                <div class="stat">
+                    <span class="stat-number">500+</span>
+                    <span>Projects Completed</span>
                 </div>
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Years of Excellence</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Projects Completed</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-number">100%</span>
-                        <span class="stat-label">Client Satisfaction</span>
-                    </div>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-visual-container">
-                    <div class="hero-shape"></div>
-                    <div class="hero-shape"></div>
-                    <div class="hero-shape"></div>
-                    <div class="hero-main-visual">
-                        Premium Shading<br>Solutions
-                    </div>
+                <div class="stat">
+                    <span class="stat-number">#1</span>
+                    <span>Leading Dealer in Bahrain</span>
                 </div>
             </div>
         </div>
@@ -867,61 +447,53 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="section-header">
-            <div class="section-badge">About World Shading</div>
-            <h2 class="section-title heading-lg">Crafting Excellence in Every Shade</h2>
-            <p class="section-subtitle text-xl">
-                Where innovation meets craftsmanship to create outdoor spaces that inspire and protect
-            </p>
-        </div>
-
+        <h2 class="section-title">About World Shading</h2>
         <div class="about-grid">
-            <div class="about-content">
-                <h3>Our Mission</h3>
+            <div class="about-text">
                 <p>World Shading combines craftsmanship and innovation to deliver premium shading solutions that enhance outdoor living spaces. With over 10 years of experience, we are committed to transforming homes and businesses with custom-made, high-quality shade structures built to last.</p>
                 <p>Located in Bahrain, we have established ourselves as the leading dealer in premium shading solutions, serving residential and commercial clients across the region with unmatched expertise and dedication to quality.</p>
             </div>
-            <div class="about-visual">
-                Craftsmanship & Innovation
+            <div style="background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); height: 300px; border-radius: 20px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem;">
+                About Us Image Placeholder
             </div>
         </div>
 
         <div class="excellence-grid">
             <div class="excellence-card">
                 <h3>Premium Materials</h3>
-                <p>Only the finest materials sourced globally for lasting quality, durability, and performance that exceeds expectations.</p>
+                <p>Only the finest materials for lasting quality and performance</p>
             </div>
             <div class="excellence-card">
                 <h3>Custom-Made Solutions</h3>
-                <p>Tailored designs crafted to meet your specific needs, preferences, and architectural requirements.</p>
+                <p>Tailored designs to meet your specific needs and preferences</p>
             </div>
             <div class="excellence-card">
                 <h3>UV Protection</h3>
-                <p>Superior protection from harmful UV rays with advanced fabric technology and strategic design.</p>
+                <p>Superior protection from harmful UV rays</p>
             </div>
             <div class="excellence-card">
-                <h3>Long-Lasting Durability</h3>
-                <p>Built to withstand time and weather conditions with premium construction and materials.</p>
+                <h3>Long-Lasting</h3>
+                <p>Built to withstand time and weather conditions</p>
             </div>
             <div class="excellence-card">
                 <h3>Innovative Designs</h3>
-                <p>Cutting-edge designs that enhance your space while providing functional and aesthetic value.</p>
+                <p>Cutting-edge designs that enhance your space</p>
             </div>
             <div class="excellence-card">
                 <h3>Eco-Friendly Options</h3>
-                <p>Sustainable solutions for environmentally conscious clients without compromising on quality.</p>
+                <p>Sustainable solutions for environmentally conscious clients</p>
             </div>
             <div class="excellence-card">
                 <h3>Weather Resistance</h3>
-                <p>Specially designed to withstand Bahrain's challenging climate conditions year-round.</p>
+                <p>Designed to withstand Bahrain's challenging climate</p>
             </div>
             <div class="excellence-card">
                 <h3>Fast & Reliable Service</h3>
-                <p>Efficient installation process and exceptional customer service from consultation to completion.</p>
+                <p>Efficient installation and exceptional customer service</p>
             </div>
             <div class="excellence-card">
                 <h3>Expert Craftsmanship</h3>
-                <p>Skilled professionals with years of experience delivering superior results and attention to detail.</p>
+                <p>Skilled professionals delivering superior results</p>
             </div>
         </div>
     </section>
@@ -929,26 +501,20 @@
     <!-- Featured Products Section -->
     <section id="products" class="products">
         <div class="products-container">
-            <div class="section-header">
-                <div class="section-badge">Our Products</div>
-                <h2 class="section-title heading-lg">Featured Shading Solutions</h2>
-                <p class="section-subtitle text-xl">
-                    Discover our comprehensive range of premium shading products designed for every space
-                </p>
-            </div>
+            <h2 class="section-title">Featured Products</h2>
             <div class="products-grid">
                 <div class="product-card">
                     <div class="product-image">Pergolas & Gazebos</div>
                     <div class="product-info">
                         <h3>Pergolas & Gazebos</h3>
-                        <p>Custom-designed pergolas and gazebos that create perfect outdoor living spaces with style, functionality, and architectural excellence.</p>
+                        <p>Custom-designed pergolas and gazebos that create perfect outdoor living spaces with style and functionality.</p>
                     </div>
                 </div>
                 <div class="product-card">
                     <div class="product-image">Awnings & Canopies</div>
                     <div class="product-info">
                         <h3>Awnings & Canopies</h3>
-                        <p>Retractable and fixed awnings providing flexible shade solutions for patios, decks, and commercial spaces with premium materials.</p>
+                        <p>Retractable and fixed awnings providing flexible shade solutions for patios, decks, and commercial spaces.</p>
                     </div>
                 </div>
                 <div class="product-card">
@@ -962,7 +528,7 @@
                     <div class="product-image">Commercial Structures</div>
                     <div class="product-info">
                         <h3>Commercial Structures</h3>
-                        <p>Large-scale shading solutions for businesses, schools, and public spaces designed for durability and professional aesthetics.</p>
+                        <p>Large-scale shading solutions for businesses, schools, and public spaces designed for durability and style.</p>
                     </div>
                 </div>
             </div>
@@ -972,59 +538,53 @@
     <!-- Portfolio Section -->
     <section id="portfolio" class="portfolio">
         <div class="portfolio-container">
-            <div class="section-header">
-                <div class="section-badge">Our Portfolio</div>
-                <h2 class="section-title heading-lg">Exceptional Projects We've Delivered</h2>
-                <p class="section-subtitle text-xl">
-                    Explore our showcase of premium shading installations across Bahrain
-                </p>
-            </div>
+            <h2 class="section-title">Our Works</h2>
             <div class="portfolio-grid">
                 <div class="portfolio-item">
                     <div class="portfolio-overlay">
                         <div>
-                            <h3>Luxury Residential Villa</h3>
-                            <p>Custom pergola installation with integrated lighting and premium weather-resistant materials</p>
+                            <h3>Residential Villa Project</h3>
+                            <p>Custom pergola installation with integrated lighting</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-overlay">
                         <div>
-                            <h3>Commercial Restaurant Terrace</h3>
-                            <p>Large-scale retractable awning system providing flexible outdoor dining solutions</p>
+                            <h3>Commercial Restaurant</h3>
+                            <p>Large-scale retractable awning system</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-overlay">
                         <div>
-                            <h3>International School Campus</h3>
-                            <p>UV-protective shade sails ensuring children's safety during outdoor activities</p>
+                            <h3>School Playground</h3>
+                            <p>UV-protective shade sails for children's safety</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-overlay">
                         <div>
-                            <h3>Five-Star Hotel Pool Area</h3>
-                            <p>Elegant cabanas and poolside shading creating luxurious guest experiences</p>
+                            <h3>Hotel Pool Area</h3>
+                            <p>Elegant cabanas and poolside shading</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-overlay">
                         <div>
-                            <h3>Corporate Office Complex</h3>
-                            <p>Modern outdoor meeting space with innovative shade structures for employee comfort</p>
+                            <h3>Corporate Office</h3>
+                            <p>Modern outdoor meeting space with shade</p>
                         </div>
                     </div>
                 </div>
                 <div class="portfolio-item">
                     <div class="portfolio-overlay">
                         <div>
-                            <h3>Premium Shopping Center</h3>
-                            <p>Weather-resistant walkway coverings enhancing customer experience and protection</p>
+                            <h3>Retail Shopping Center</h3>
+                            <p>Weather-resistant walkway coverings</p>
                         </div>
                     </div>
                 </div>
@@ -1035,48 +595,33 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="contact-container">
-            <div class="section-header">
-                <div class="section-badge" style="background: rgba(245, 158, 11, 0.2); border-color: var(--accent-color);">Contact Us</div>
-                <h2 class="section-title heading-lg" style="color: white;">Ready to Transform Your Space?</h2>
-                <p class="section-subtitle text-xl" style="color: rgba(255, 255, 255, 0.9);">
-                    Get in touch for a free consultation and discover how we can enhance your outdoor environment
-                </p>
-            </div>
+            <h2 class="section-title" style="color: white;">Get In Touch</h2>
             <div class="contact-grid">
                 <div class="contact-info">
-                    <h3>Let's Discuss Your Project</h3>
-                    <p>Ready to transform your outdoor space with premium shading solutions? Our team of experts is here to help you create the perfect environment for your home or business.</p>
-                    
-                    <div style="margin: 2rem 0;">
-                        <p><strong>📍 Location:</strong> Kingdom of Bahrain</p>
-                        <p><strong>📞 Phone:</strong> +973 XXXX XXXX</p>
-                        <p><strong>✉️ Email:</strong> info@worldshading.bh</p>
-                        <p><strong>🕒 Business Hours:</strong><br>Sunday - Thursday: 8:00 AM - 6:00 PM<br>Saturday: 9:00 AM - 4:00 PM</p>
-                    </div>
-                    
-                    <p style="margin-top: 2rem; font-size: 0.95rem; opacity: 0.8;">
-                        We provide free on-site consultations and detailed project estimates. Our experienced team will work with you to design the perfect shading solution that meets your specific requirements and budget.
-                    </p>
+                    <h3>Contact Information</h3>
+                    <p>Ready to transform your outdoor space? Contact World Shading today for a free consultation and quote.</p>
+                    <br>
+                    <p><strong>Location:</strong> Bahrain</p>
+                    <p><strong>Phone:</strong> +973 XXXX XXXX</p>
+                    <p><strong>Email:</strong> info@worldshading.bh</p>
+                    <p><strong>Business Hours:</strong> Sunday - Thursday: 8:00 AM - 6:00 PM</p>
                 </div>
                 <div class="contact-form">
-                    <h3>Request Your Free Quote</h3>
+                    <h3>Request a Quote</h3>
                     <form>
                         <div class="form-group">
-                            <input type="text" placeholder="Full Name *" required>
+                            <input type="text" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" placeholder="Email Address *" required>
+                            <input type="email" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <input type="tel" placeholder="Phone Number">
+                            <input type="tel" placeholder="Your Phone">
                         </div>
                         <div class="form-group">
-                            <input type="text" placeholder="Project Location">
+                            <textarea rows="5" placeholder="Project Details" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <textarea rows="4" placeholder="Tell us about your project requirements, preferred timeline, and any specific design preferences..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn-primary" style="width: 100%; margin-top: 1rem;">Send Message & Get Quote</button>
+                        <button type="submit" class="cta-btn" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
             </div>
@@ -1085,53 +630,37 @@
 
     <!-- Footer -->
     <footer class="footer">
-        <p>&copy; 2025 World Shading. All rights reserved. | Leading Premium Shading Solutions in Bahrain</p>
+        <p>&copy; 2025 World Shading. All rights reserved. | Leading Shading Solutions in Bahrain</p>
     </footer>
 
     <script>
-        // Enhanced smooth scrolling
+        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.offsetTop;
-                    const offsetPosition = elementPosition - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
                 }
             });
         });
 
-        // Enhanced header scroll effect
-        let lastScrollTop = 0;
+        // Header scroll effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('.header');
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            
-            if (scrollTop > 100) {
-                header.style.background = 'rgba(255, 255, 255, 0.95)';
-                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.1)';
-                header.style.backdropFilter = 'blur(20px)';
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
             } else {
-                header.style.background = 'rgba(255, 255, 255, 0.85)';
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
                 header.style.boxShadow = 'none';
             }
-            
-            // Hide header on scroll down, show on scroll up
-            if (scrollTop > lastScrollTop && scrollTop > 200) {
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                header.style.transform = 'translateY(0)';
-            }
-            lastScrollTop = scrollTop;
         });
 
-        // Enhanced intersection observer for animations
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1142,92 +671,23 @@
                 if (entry.isIntersecting) {
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
-                    
-                    // Stagger animation for cards
-                    if (entry.target.classList.contains('excellence-card') || 
-                        entry.target.classList.contains('product-card')) {
-                        const cards = entry.target.parentNode.children;
-                        const index = Array.from(cards).indexOf(entry.target);
-                        entry.target.style.transitionDelay = `${index * 0.1}s`;
-                    }
                 }
             });
         }, observerOptions);
 
-        // Observe elements for scroll animations
-        document.querySelectorAll('.excellence-card, .product-card, .portfolio-item, .section-header').forEach(el => {
+        // Observe all sections for scroll animations
+        document.querySelectorAll('.excellence-card, .product-card, .portfolio-item').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
-            el.style.transition = 'all 0.6s cubic-bezier(0.4, 0, 0.2, 1)';
+            el.style.transition = 'all 0.6s ease-out';
             observer.observe(el);
         });
 
-        // Enhanced form submission
+        // Form submission handling
         document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            // Simulate form submission
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-            
-            setTimeout(() => {
-                submitBtn.textContent = 'Message Sent! ✓';
-                submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-                
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = 'linear-gradient(135deg, var(--primary-color), var(--accent-color))';
-                    this.reset();
-                }, 2000);
-            }, 1500);
-        });
-
-        // Mobile menu toggle (basic functionality)
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
-
-        // Add loading animation
-        window.addEventListener('load', function() {
-            document.body.style.opacity = '0';
-            document.body.style.transition = 'opacity 0.5s ease';
-            
-            setTimeout(() => {
-                document.body.style.opacity = '1';
-            }, 100);
-        });
-
-        // Parallax effect for hero shapes
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const shapes = document.querySelectorAll('.hero-shape');
-            
-            shapes.forEach((shape, index) => {
-                const rate = scrolled * -0.5 * (index + 1);
-                shape.style.transform = `translateY(${rate}px)`;
-            });
-        });
-
-        // CTA button actions
-        document.querySelectorAll('.btn-primary, .cta-btn').forEach(btn => {
-            btn.addEventListener('click', function() {
-                if (this.textContent.includes('Explore')) {
-                    document.querySelector('#portfolio').scrollIntoView({ behavior: 'smooth' });
-                } else {
-                    document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-
-        document.querySelectorAll('.btn-secondary').forEach(btn => {
-            btn.addEventListener('click', function() {
-                document.querySelector('#contact').scrollIntoView({ behavior: 'smooth' });
-            });
+            alert('Thank you for your inquiry! We will contact you soon.');
+            this.reset();
         });
     </script>
 </body>
